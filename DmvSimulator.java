@@ -15,7 +15,7 @@ public class DmvSimulator {
 
     private static int generateRandomNumber() {
         Random random = new Random();
-        return random.nextInt(100) + 1; // Generates a random number between 1 and 100
+        return random.nextInt(200) + 1; // Generates a random number between 1 and 200
     }
 
     private static void simulateDMV(int userNumber) {
