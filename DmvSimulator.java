@@ -20,18 +20,25 @@ public class DmvSimulator {
 
     private static void simulateDMV(int userNumber) {
         System.out.println("Please wait until your number is called.");
-
+    
         // Simulate calling out numbers
         for (int i = userNumber + 1; i <= 100; i++) {
             System.out.println("Number " + i + ", please proceed.");
         }
-
+    
         // Wrap around to the beginning
         for (int i = 1; i < userNumber; i++) {
             System.out.println("Number " + i + ", please proceed.");
         }
+    
 
-        // Notify the user they don't have required paperwork
-        System.out.println("Number " + userNumber + ", we're sorry, but you don't have the required paperwork.");
+        // Randomly choose the message at the end
+        double randomChance = Math.random();
+        if (randomChance < 0.01) {
+            System.out.println("Number " + userNumber + ", you have all the required paperwork. You are all set!");
+        } else {
+            // Notify the user they don't have required paperwork with an evil laugh
+    System.out.println("Number " + userNumber + ", we're sorry, but you don't have the required paperwork. Muahaha!");
+        }
     }
 }
