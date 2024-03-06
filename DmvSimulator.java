@@ -31,12 +31,14 @@ public class DmvSimulator {
             System.out.println("Number " + i + ", please proceed.");
         }
     
+
         // Randomly choose the message at the end
         double randomChance = Math.random();
         if (randomChance < 0.01) {
             System.out.println("Number " + userNumber + ", you have all the required paperwork. You are all set!");
         } else {
-            System.out.println("Number " + userNumber + ", we're sorry, but you don't have the required paperwork.");
+            // Notify the user they don't have required paperwork with an evil laugh
+    System.out.println("Number " + userNumber + ", we're sorry, but you don't have the required paperwork. Muahaha!");
         }
     }
 }
